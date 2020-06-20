@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 function Mode() {
   const [modes, setModes] = useState([]);
-  const [selectedMode, setSelectedMode] = useState("tube");
+  const [selectedMode, setSelectedMode] = useState("bus");
   const [lines, setLines] = useState([]);
   const [selectedLine, setSelectedLine] = useState("");
 
