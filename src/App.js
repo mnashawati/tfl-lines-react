@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="">
-        <p>Transport For London Line Information</p>
+        <h2>Transport For London Line Information</h2>
       </header>
       <ModeSelection />
     </div>
