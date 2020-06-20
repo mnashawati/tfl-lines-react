@@ -46,7 +46,9 @@ function Mode() {
             <option key={mode.modeName}>{mode.modeName}</option>
           ))}
         </select>
-        <p>Selected mode: {selectedMode && selectedMode.modeName} </p>
+        <p>
+          <b>Selected mode: </b> {selectedMode && selectedMode.modeName}{" "}
+        </p>
       </div>
       <div className="line-selection-menu">
         <select onChange={handleSelectedLine}>
@@ -55,7 +57,9 @@ function Mode() {
             <option key={line.id}>{line.name}</option>
           ))}
         </select>
-        <p>Selected line: {selectedLine && selectedLine.name} </p>
+        <p>
+          <b>Selected line: </b> {selectedLine && selectedLine.name}{" "}
+        </p>
       </div>
       {route && selectedLine ? (
         <div className="route-info">
