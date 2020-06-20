@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
-import Mode from "./components/Mode";
+import ModeSelection from "./components/ModeSelection";
+// import Selection from "./components/Selection";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <header className="">
         <p>Transport For London Line Information</p>
       </header>
-      <Mode />
+      <ModeSelection />
     </div>
   );
 }
