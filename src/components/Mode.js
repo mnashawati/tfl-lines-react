@@ -30,6 +30,8 @@ function Mode() {
   }, [selectedLine]);
 
   const handleSelectedMode = (e) => {
+    setSelectedLine(null);
+    setRoute(null);
     setSelectedMode(modes.find((mode) => mode.modeName === e.target.value));
   };
 
@@ -50,18 +52,22 @@ function Mode() {
           <b>Selected mode: </b> {selectedMode && selectedMode.modeName}{" "}
         </p>
       </div>
-      <div className="line-selection-menu">
-        <select onChange={handleSelectedLine}>
-          <option value={""}>Choose a Line...</option>
-          {lines.map((line) => (
-            <option key={line.id}>{line.name}</option>
-          ))}
-        </select>
-        <p>
-          <b>Selected line: </b> {selectedLine && selectedLine.name}{" "}
-        </p>
-      </div>
-      {route && selectedLine ? (
+
+      {lines.length > 0 ? (
+        <div className="line-selection-menu">
+          <select onChange={handleSelectedLine}>
+            <option value={""}>Choose a Line...</option>
+            {lines.map((line) => (
+              <option key={line.id}>{line.name}</option>
+            ))}
+          </select>
+          <p>
+            <b>Selected line: </b> {selectedLine && selectedLine.name}{" "}
+          </p>
+        </div>
+      ) : null}
+
+      {route && lines.length > 0 ? (
         <div className="route-info">
           <span>
             <p>
