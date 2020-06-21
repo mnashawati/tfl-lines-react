@@ -18,18 +18,16 @@ function Route({ lines, selectedLine }) {
     <>
       {route && lines.length > 0 ? (
         <div className="route-info">
-          <span>
-            <p>
-              START OF LINE: <b>{route.routeSections[0].originationName}</b>
-            </p>
+          <span className="start-end-line-container">
+            <p className="start-end-line-title">START OF LINE</p>
+            <p>{route.routeSections[0].originationName}</p>
           </span>
           <span>
-            <b>&#8594;</b>
+            <p className="arrow">&#8594;</p>
           </span>
-          <span>
-            <p>
-              END OF LINE: <b>{route.routeSections[0].destinationName}</b>
-            </p>
+          <span className="start-end-line-container">
+            <p className="start-end-line-title">END OF LINE</p>
+            <p>{route.routeSections[0].destinationName}</p>
           </span>
         </div>
       ) : null}
