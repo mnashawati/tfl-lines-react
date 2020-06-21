@@ -17,6 +17,8 @@
   height: 120px;
   display: flex;
   flex-direction: column;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .start-end-line-title {
