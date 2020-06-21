@@ -20,7 +20,10 @@ function ModeSelection() {
   return (
     <>
       <div>
-        <select onChange={handleSelectedMode}>
+        <select
+          className="selection-dropdown-menu"
+          onChange={handleSelectedMode}
+        >
           <option value={""}>Choose a Mode of Transport...</option>
           {modes.map((mode) => (
             <option key={mode.modeName}>{mode.modeName}</option>

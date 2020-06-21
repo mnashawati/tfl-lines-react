@@ -27,7 +27,10 @@ function LineSelection({ selectedMode }) {
       {lines.length > 0 ? (
         <>
           <div className="line-selection-menu">
-            <select onChange={handleSelectedLine}>
+            <select
+              className="selection-dropdown-menu"
+              onChange={handleSelectedLine}
+            >
               <option value={""}>Choose a Line...</option>
               {lines.map((line) => (
                 <option key={line.id}>{line.name}</option>

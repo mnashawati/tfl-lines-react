@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+.selection-dropdown-menu {
+  width: 80%;
+  height: 40px;
+  background-color: rgb(129, 128, 128);
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
 .route-info {
   display: flex;
   justify-content: center;
